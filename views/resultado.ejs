@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="\styles\style.css">
+
+<head>
+    <title>Resultado da Consulta</title>
+</head>
+
+<body>
+    <h1>Resultado da Consulta</h1>
+<% if (resultados.length> 0) { %>
+    <ul>
+        <% resultados.forEach(function(produto) { %>
+            <li>
+                Nome: <%= produto.nome %><br>
+                    Preço: <%= produto.preco %>
+            </li>
+            <% }) %>
+    </ul>
+    <% } else { %>
+        <p>Nenhum produto encontrado.</p>
+        <% } %>
+
+</body>
+
+</html>
